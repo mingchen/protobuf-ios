@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000003200000004 /* widget.cc in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000003200000003 /* widget.cc */; };
+		100000000000003200000006 /* widget.h in Headers */ = {isa = PBXBuildFile; fileRef = 100000000000003200000005 /* widget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		100000000000003200000008 /* widget_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000003200000007 /* widget_test.cc */; };
+		100000000000001C0000000D /* Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100000000000001C0000000C /* Widget.framework */; };
+		10000000000000250000005B /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100000000000002500000058 /* gtest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10000000000000150000003A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1000000000000015000001E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D07F2BC0486CC7A007CD1D0;
+			remoteInfo = gTestExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		100000000000001C00000010 /* WidgetFrameworkTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WidgetFrameworkTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100000000000003200000003 /* widget.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = widget.cc; sourceTree = "<group>"; };
+		100000000000003200000005 /* widget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = widget.h; sourceTree = "<group>"; };
+		100000000000003200000007 /* widget_test.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = widget_test.cc; sourceTree = "<group>"; };
+		100000000000002500000058 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../build/Debug/gtest.framework; sourceTree = "<group>"; };
+		100000000000000F00000085 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		100000000000001C0000000C /* Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100000000000000C000000AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000001C0000000D /* Widget.framework in Frameworks */,
+				10000000000000250000005B /* gtest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100000000000000C000000AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1000000000000015000001D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000001C0000000C /* Widget.framework */,
+				100000000000001C00000010 /* WidgetFrameworkTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1000000000000017000000A6 /* gTestExample */ = {
+			isa = PBXGroup;
+			children = (
+				1000000000000018000000E4 /* Source */,
+				10000000000000170000006F /* Resources */,
+				10000000000000190000013B /* Test */,
+				100000000000000B00000036 /* External Frameworks and Libraries */,
+				1000000000000015000001D5 /* Products */,
+			);
+			name = gTestExample;
+			sourceTree = "<group>";
+		};
+		100000000000000B00000036 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000002500000058 /* gtest.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		10000000000000170000006F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000F00000085 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1000000000000018000000E4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000003200000003 /* widget.cc */,
+				100000000000003200000005 /* widget.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		10000000000000190000013B /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000003200000007 /* widget_test.cc */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		100000000000000E00000006 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000003200000006 /* widget.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		100000000000001C0000000F /* WidgetFrameworkTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000800000131 /* Build configuration list for PBXNativeTarget "WidgetFrameworkTest" */;
+			buildPhases = (
+				1000000000000018000000F3 /* Sources */,
+				100000000000000C000000AB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1000000000000015000000AB /* PBXTargetDependency */,
+			);
+			name = WidgetFrameworkTest;
+			productName = gTestExampleTest;
+			productReference = 100000000000001C00000010 /* WidgetFrameworkTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		100000000000001C0000000E /* WidgetFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000800000130 /* Build configuration list for PBXNativeTarget "WidgetFramework" */;
+			buildPhases = (
+				100000000000001800000118 /* Sources */,
+				100000000000000C000000AC /* Frameworks */,
+				100000000000000E00000006 /* Headers */,
+				100000000000001700000070 /* Resources */,
+				100000000000001700000087 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetFramework;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = gTestExample;
+			productReference = 100000000000001C0000000C /* Widget.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1000000000000015000001E1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 10000000000000080000017F /* Build configuration list for PBXProject "WidgetFramework" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 1000000000000017000000A6 /* gTestExample */;
+			productRefGroup = 1000000000000015000001D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100000000000001C0000000E /* WidgetFramework */,
+				100000000000001C0000000F /* WidgetFrameworkTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100000000000001700000070 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		100000000000001700000087 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1000000000000018000000F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000003200000008 /* widget_test.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100000000000001800000118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000003200000004 /* widget.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1000000000000015000000AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100000000000001C0000000E /* WidgetFramework */;
+			targetProxy = 10000000000000150000003A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		100000000000000A00000048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/externals/googletest/xcode/build/Debug\"",
+					"\"$(SRCROOT)/../../build/Debug\"",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = WidgetFrameworkTest;
+			};
+			name = Debug;
+		};
+		10000000000000170000002B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/externals/googletest/xcode/build/Debug\"",
+					"\"$(SRCROOT)/../../build/Debug\"",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = WidgetFrameworkTest;
+			};
+			name = Release;
+		};
+		100000000000000A00000071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Widget;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		100000000000001700000053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Widget;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		100000000000000A00000072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		100000000000001700000054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000800000131 /* Build configuration list for PBXNativeTarget "WidgetFrameworkTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000A00000048 /* Debug */,
+				10000000000000170000002B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000800000130 /* Build configuration list for PBXNativeTarget "WidgetFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000A00000071 /* Debug */,
+				100000000000001700000053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10000000000000080000017F /* Build configuration list for PBXProject "WidgetFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000A00000072 /* Debug */,
+				100000000000001700000054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1000000000000015000001E1 /* Project object */;
+}
