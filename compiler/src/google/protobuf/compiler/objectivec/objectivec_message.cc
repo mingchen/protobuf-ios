@@ -436,6 +436,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       "+ ($classname$*) parseFromData:(NSData*) data;\n"
       "+ ($classname$*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;\n"
       "+ ($classname$*) parseFromInputStream:(NSInputStream*) input;\n"
+      "+ ($classname$*) parseDelimitedFromInputStream:(NSInputStream*) input;\n"
       "+ ($classname$*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;\n"
       "+ ($classname$*) parseFromCodedInputStream:(PBCodedInputStream*) input;\n"
       "+ ($classname$*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;\n",
@@ -617,6 +618,9 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       "}\n"
       "+ ($classname$*) parseFromInputStream:(NSInputStream*) input {\n"
       "  return ($classname$*)[[[$classname$ builder] mergeFromInputStream:input] build];\n"
+      "}\n"
+      "+ ($classname$*) parseDelimitedFromInputStream:(NSInputStream*) input {\n"
+      "  return ($classname$*)[[[$classname$ builder] mergeDelimitedFromInputStream:input] build];\n"
       "}\n"
       "+ ($classname$*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {\n"
       "  return ($classname$*)[[[$classname$ builder] mergeFromInputStream:input extensionRegistry:extensionRegistry] build];\n"
