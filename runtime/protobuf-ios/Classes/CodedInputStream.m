@@ -762,6 +762,40 @@ const int32_t BUFFER_SIZE = 4096;
   }
 }
 
++ (int) readRawVarint32:(int)firstByte withInputStream:(NSInputStream*) input
+{
+    if ((firstByte & 0x80) == 0) {
+        return firstByte;
+    }
+
+    int result = firstByte & 0x7f;
+    int offset = 7;
+    for (; offset < 32; offset += 7) {
+        uint8_t b;
+        if ([input read:&b maxLength:1] <= 0) {
+            @throw [NSException exceptionWithName:@"InvalidProtocolBuffer" reason:@"truncatedMessage" userInfo:nil];
+        }
+
+        result |= (b &0x7f) << offset;
+        if ((b & 0x80) == 0) {
+            return result;
+        }
+    }
+
+    // keep reading up to 64 bits
+    for (; offset < 64; offset += 7) {
+        uint8_t b;
+        if ([input read:&b maxLength:1] <= 0) {
+            @throw [NSException exceptionWithName:@"InvalidProtocolBuffer" reason:@"truncatedMessage" userInfo:nil];
+        }
+
+        if ((b & 0x80) == 0) {
+            return result;
+        }
+    }
+
+    @throw [NSException exceptionWithName:@"InvalidProtocolBuffer" reason:@"mallformedVarint" userInfo:nil];
+}
 
 
 @end

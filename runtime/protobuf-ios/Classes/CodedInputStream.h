@@ -60,7 +60,7 @@
 
 + (PBCodedInputStream*) streamWithData:(NSData*) data;
 + (PBCodedInputStream*) streamWithInputStream:(NSInputStream*) input;
-
++ (int) readRawVarint32:(int)firstByte withInputStream:(NSInputStream*) input;
 /**
  * Attempt to read a field tag, returning zero if we have reached EOF.
  * Protocol message parsers use this to read tags, since a protocol message

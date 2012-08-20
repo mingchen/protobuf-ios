@@ -58,6 +58,14 @@
   [codedOutput flush];
 }
 
+- (void) writeDelimitedToOutputStream:(NSOutputStream *)output
+{
+    int serialized = [self serializedSize];
+    PBCodedOutputStream* codedOutput = [PBCodedOutputStream streamWithOutputStream:output];
+    [codedOutput writeRawVarint32:serialized];
+    [self writeToCodedOutputStream:codedOutput];
+    [codedOutput flush];
+}
 
 - (id<PBMessage>) defaultInstance {
   @throw [NSException exceptionWithName:@"ImproperSubclassing" reason:@"" userInfo:nil];

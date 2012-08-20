@@ -40,6 +40,7 @@
 - (PBUnknownFieldSet_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
 - (PBUnknownFieldSet_Builder*) mergeFromData:(NSData*) data;
 - (PBUnknownFieldSet_Builder*) mergeFromInputStream:(NSInputStream*) input;
+- (PBUnknownFieldSet_Builder*) mergeDelimitedFromInputStream:(NSInputStream*) input;
 
 - (PBUnknownFieldSet_Builder*) mergeVarintField:(int32_t) number value:(int32_t) value;
 

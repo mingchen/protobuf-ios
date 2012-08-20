@@ -23,7 +23,6 @@
 #import "UnknownFieldSet.h"
 #import "UnknownFieldSet_Builder.h"
 
-
 @implementation PBAbstractMessage_Builder
 
 - (id<PBMessage_Builder>) clone {
@@ -90,6 +89,18 @@
   return self;
 }
 
+- (id<PBMessage_Builder>) mergeDelimitedFromInputStream:(NSInputStream*) input
+{
+    u_int8_t firstByte;
+    if ([input read:&firstByte maxLength:1] != 1) {
+        return nil;
+    }
+
+    int size = [PBCodedInputStream readRawVarint32:firstByte withInputStream:input];
+    NSMutableData *data = [NSMutableData dataWithLength:size];
+    [input read:[data mutableBytes] maxLength:size];
+    return [self mergeFromData:data];
+}
 
 - (id<PBMessage>) build {
   @throw [NSException exceptionWithName:@"ImproperSubclassing" reason:@"" userInfo:nil];

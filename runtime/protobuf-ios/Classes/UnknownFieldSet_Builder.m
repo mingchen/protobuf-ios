@@ -207,6 +207,11 @@
   @throw [NSException exceptionWithName:@"UnsupportedMethod" reason:@"" userInfo:nil];
 }
 
+- (PBUnknownFieldSet_Builder*) mergeDelimitedFromInputStream:(NSInputStream*) input
+{
+  @throw [NSException exceptionWithName:@"UnsupportedMethod" reason:@"" userInfo:nil];
+}
+
 - (PBUnknownFieldSet_Builder*) mergeVarintField:(int32_t) number value:(int32_t) value {
   if (number == 0) {
     @throw [NSException exceptionWithName:@"IllegalArgument" reason:@"Zero is not a valid field number." userInfo:nil];

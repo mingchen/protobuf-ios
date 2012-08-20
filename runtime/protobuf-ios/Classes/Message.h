@@ -58,6 +58,7 @@
  */
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
 - (void) writeToOutputStream:(NSOutputStream*) output;
+- (void) writeDelimitedToOutputStream:(NSOutputStream*) output;
 
 /**
  * Serializes the message to a {@code ByteString} and returns it. This is

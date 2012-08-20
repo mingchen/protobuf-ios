@@ -133,4 +133,8 @@
  * {@link #mergeFrom(CodedInputStream,ExtensionRegistry)}.
  */
 - (id<PBMessage_Builder>) mergeFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+
+- (id<PBMessage_Builder>) mergeDelimitedFromInputStream:(NSInputStream*) input;
+
+
 @end
