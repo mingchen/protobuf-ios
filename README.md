@@ -1,8 +1,20 @@
-# Intro
+protobuf-ios
+============
+
+
+# Introduction
+
+This is a protobuf iOS library.
+
+
+## Supported Platform
+
+* iOS 4.0 and above
+
 
 # Features
 
-- Support write to / parse from delimited stream.
+- Support write to / parse from delimited stream (protobuf 2.3 feature).
 
 # How to use
 
@@ -18,11 +30,12 @@ The compiler is genrated at `src/protoc`.
 
 ## Usage
 
-    src/protoc --objc_out=. foo.proto
+    ./src/protoc --objc_out=. foo.proto
 
-## Xcode setup
+## Xcode integration
 
 Drap `protoc-ios.xcodeproj` to your Xcode project.
+
 That's all.
 
 
