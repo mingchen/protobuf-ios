@@ -20,13 +20,28 @@ This is a protobuf iOS library.
 
 ## Get the compiler
 
-    cd compiler
-    ./autogen.sh
-    ./configure
-    make
-    make install (optional)
+Run following command to compile and install the project.
+
+    $ cd compiler
+    $ ./autogen.sh
+    $ ./configure
+    $ make
+    $ make install (optional)
 
 The compiler is genrated at `src/protoc`.
+
+*Note:*
+
+You need `autoconf` to compile from source code. If your system is not install autoconf, you can install it by brew:
+
+    $ brew install autoconf
+
+If you system already install autoconf but linked, you can link it, here is an example:
+
+    $ brew install autoconf
+    Warning: autoconf-2.69 already installed, it's just not linked    
+    $ brew link autoconf
+    Linking /usr/local/Cellar/autoconf/2.69... 28 symlinks created
 
 ## Usage
 
