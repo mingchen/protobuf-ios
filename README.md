@@ -4,8 +4,7 @@ protobuf-ios
 
 # Introduction
 
-This is a protobuf iOS library.
-
+This is a library of protobuf for iOS.
 
 ## Supported Platform
 
@@ -53,6 +52,13 @@ If you system already install autoconf but linked, you can link it, here is an e
 Drag `protoc-ios.xcodeproj` to your Xcode project.
 
 That's all.
+
+
+# Contribute
+
+Contributions are welcome!
+If you would like to contribute this project,
+please feel free to fork and send pull request.
 
 
 # Credits
