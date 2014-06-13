@@ -10,6 +10,7 @@ This is a protobuf iOS library.
 ## Supported Platform
 
 * iOS 4.0 and above
+* XCode 4 and above
 
 
 # Features
@@ -49,7 +50,7 @@ If you system already install autoconf but linked, you can link it, here is an e
 
 ## Xcode integration
 
-Drap `protoc-ios.xcodeproj` to your Xcode project.
+Drag `protoc-ios.xcodeproj` to your Xcode project.
 
 That's all.
 
