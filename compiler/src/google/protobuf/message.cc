@@ -33,10 +33,9 @@
 //  Sanjay Ghemawat, Jeff Dean, and others.
 
 #include <stack>
+#include <istream>
 #include <google/protobuf/stubs/hash.h>
-
 #include <google/protobuf/message.h>
-
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
