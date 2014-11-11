@@ -6,4 +6,4 @@ language: objective-c
 #xcode_scheme: protobuf-iosTests
 #
 
-script: build.sh
+script: ./build.sh
