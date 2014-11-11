@@ -1,6 +1,7 @@
 protobuf-ios
 ============
 
+![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)
 
 # Introduction
 
