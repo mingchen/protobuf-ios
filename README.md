@@ -1,7 +1,7 @@
 protobuf-ios
 ============
 
-![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)
+[![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)](https://travis-ci.org/mingchen/protobuf-ios)
 
 # Introduction
 
