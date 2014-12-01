@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This is a library of protobuf for iOS.
+[![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)](https://travis-ci.org/mingchen/protobuf-ios)
+
+Google proto buffer for iOS written in Objective-C
 
 ### Supported Platform
 

@@ -1,0 +1,9 @@
+language: objective-c
+
+# path to your xcodeproj folder
+#xcode_project: runtime/protobuf-ios/protobuf-ios.xcodeproj 
+
+#xcode_scheme: protobuf-iosTests
+#
+
+script: ./build.sh
