@@ -1,24 +1,22 @@
-protobuf-ios
-============
+# protobuf-ios
 
-
-# Introduction
+## Introduction
 
 This is a library of protobuf for iOS.
 
-## Supported Platform
+### Supported Platform
 
 * iOS 4.0 and above
 * XCode 4 and above
 
 
-# Features
+## Features
 
 - Support write to / parse from delimited stream (protobuf 2.3 feature).
 
-# How to use
+## How to use
 
-## Get the compiler
+### Get the compiler
 
 Run following command to compile and install the project.
 
@@ -43,22 +41,22 @@ If you system already install autoconf but linked, you can link it, here is an e
     $ brew link autoconf
     Linking /usr/local/Cellar/autoconf/2.69... 28 symlinks created
 
-## Usage
+### Usage
 
     ./src/protoc --objc_out=. foo.proto
 
-## Xcode integration
+### Xcode integration
 
 Drag `protoc-ios.xcodeproj` to your Xcode project.
 
 That's all.
 
 
-# Contribute
+## Contribution
 
 Contributions are welcome!
 If you would like to contribute this project,
-please feel free to fork and send pull request.
+please feel free to *fork* and send *pull* request.
 
 
 # Credits
