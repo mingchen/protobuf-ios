@@ -4,7 +4,7 @@
 
 [![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)](https://travis-ci.org/mingchen/protobuf-ios)
 
-Google proto buffer for iOS written in Objective-C
+Google proto buffer for **iOS** written in **Objective-C**
 
 ### Supported Platform
 
@@ -57,14 +57,15 @@ That's all.
 ## Contribution
 
 Contributions are welcome!
+
 If you would like to contribute this project,
-please feel free to *fork* and send *pull* request.
+please feel free to [fork](https://github.com/mingchen/protobuf-ios/fork) and send **pull** request.
 
 
 # Credits
 
-- Booyah Inc (https://github.com/booyah/protobuf-objc)
-- Cyrus Najmabadi (http://code.google.com/p/metasyntactic/wiki/ProtocolBuffers)
+- [Booyah Inc](https://github.com/booyah/protobuf-objc)
+- [Cyrus Najmabadi](http://code.google.com/p/metasyntactic/wiki/ProtocolBuffers)
 
 
 # References
