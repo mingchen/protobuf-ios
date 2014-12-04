@@ -6,7 +6,8 @@
 #
 Pod::Spec.new do |s|
   s.name             = "protobuf-ios"
-  s.version          = File.read('VERSION')
+#  s.version          = File.read('VERSION')
+  s.version          = "2.3.1"
   s.summary          = "Google proto buffer for iOS written in Objective-C"
   s.description      = <<-DESC
                        Google proto buffer for iOS written in Objective-C
