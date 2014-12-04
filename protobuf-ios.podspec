@@ -10,9 +10,11 @@ Pod::Spec.new do |s|
   s.summary          = "Google proto buffer for iOS written in Objective-C"
   s.description      = <<-DESC
                        Google proto buffer for iOS written in Objective-C
+
+                       * Support write to / parse from delimited stream (protobuf 2.3 feature).
                        DESC
   s.homepage         = "https://github.com/mingchen/protobuf-ios"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+# s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Ming Chen" => "mockey.chen@gmail.com" }
   s.source           = { :git => "https://github.com/mingchen/protobuf-ios.git", :tag => s.version.to_s }
@@ -21,7 +23,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, '5.0'
   # s.ios.deployment_target = '5.0'
   # s.osx.deployment_target = '10.7'
-  s.requires_arc = true
+  s.requires_arc = false
 
   s.source_files = 'runtime/protobuf-ios/Classes'
   # s.resources = 'Assets/*.png'
