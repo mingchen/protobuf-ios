@@ -7,10 +7,10 @@
 Pod::Spec.new do |s|
   s.name             = "protobuf-ios"
 #  s.version          = File.read('VERSION')
-  s.version          = "2.3.1"
-  s.summary          = "Google proto buffer for iOS written in Objective-C"
+  s.version          = "2.3.2"
+  s.summary          = "An Objective-C implementation of Google proto buffer for iOS"
   s.description      = <<-DESC
-                       Google proto buffer for iOS written in Objective-C
+                        An Objective-C implementation of Google proto buffer for iOS
 
                        * Support write to / parse from delimited stream (protobuf 2.3 feature).
                        DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/mingchen/protobuf-ios.git", :tag => s.version.to_s }
   s.social_media_url = 'https://github.com/mingchen/protobuf-ios'
 
-  # s.platform     = :ios, '5.0'
+  s.platform     = :ios, '5.0'
   # s.ios.deployment_target = '5.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = false
