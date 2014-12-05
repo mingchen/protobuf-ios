@@ -49,6 +49,19 @@ If you system already install autoconf but linked, you can link it, here is an e
 
 ### Xcode integration
 
+#### Integrate with CocoaPods
+
+If your project support [cocoapods](http://cocoapods.org), add a line to your **Podfile**:
+
+    pod 'protobuf-ios'
+
+Then update your dependences:
+
+    pod update
+
+
+#### Integrate with source code
+
 Drag `protoc-ios.xcodeproj` to your Xcode project.
 
 That's all.
