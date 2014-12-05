@@ -80,7 +80,7 @@ int64_t convertUInt32ToInt32(uint32_t v) {
 
 
 int32_t logicalRightShift32(int32_t value, int32_t spaces) {
-  return convertUInt32ToInt32((convertInt32ToUInt32(value) >> spaces));
+  return (int32_t)convertUInt32ToInt32((convertInt32ToUInt32(value) >> spaces));
 }
 
 
@@ -157,8 +157,8 @@ int32_t computeBoolSizeNoTag(BOOL value) {
 
 
 int32_t computeStringSizeNoTag(const NSString* value) {
-	const NSUInteger length = [value lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
-	return computeRawVarint32Size(length) + length;
+	int32_t length = (int32_t)[value lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+	return (int32_t)(computeRawVarint32Size(length) + length);
 }
 
 
@@ -179,7 +179,7 @@ int32_t computeMessageSizeNoTag(const id<PBMessage> value) {
 
 
 int32_t computeDataSizeNoTag(const NSData* value) {
-	return computeRawVarint32Size(value.length) + value.length;
+	return (int32_t)(computeRawVarint32Size((int32_t)value.length) + value.length);
 }
 
 

@@ -77,13 +77,13 @@ const int32_t DEFAULT_BUFFER_SIZE = 4 * 1024;
 
 
 - (void)writeRawData:(const NSData*)data {
-	[self writeRawData:data offset:0 length:data.length];
+	[self writeRawData:data offset:0 length:(int32_t)data.length];
 }
 
 
 - (void)writeRawData:(const NSData*)value offset:(int32_t)offset length:(int32_t)length {
 	while (length > 0) {
-		int32_t written = [buffer appendData:value offset:offset length:length];
+		int32_t written = (int32_t)[buffer appendData:value offset:offset length:length];
 		offset += written;
 		length -= written;
 		if (!written || length > 0) {
@@ -196,7 +196,7 @@ const int32_t DEFAULT_BUFFER_SIZE = 4 * 1024;
 
 - (void)writeStringNoTag:(const NSString*)value {
 	NSData* data = [value dataUsingEncoding:NSUTF8StringEncoding];
-	[self writeRawVarint32:data.length];
+	[self writeRawVarint32:(int32_t)data.length];
 	[self writeRawData:data];
 }
 
@@ -248,7 +248,7 @@ const int32_t DEFAULT_BUFFER_SIZE = 4 * 1024;
 
 
 - (void)writeDataNoTag:(const NSData*)value {
-	[self writeRawVarint32:value.length];
+	[self writeRawVarint32:(int32_t)value.length];
 	[self writeRawData:value];
 }
 

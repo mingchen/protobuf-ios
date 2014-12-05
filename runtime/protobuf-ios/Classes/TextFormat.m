@@ -85,7 +85,7 @@ BOOL isHex(unichar c) {
     if (isSigned) {
       result = strtol(in_string, &out_string, 0);
     } else {
-      result = convertUInt32ToInt32(strtoul(in_string, &out_string, 0));
+      result = convertUInt32ToInt32((uint32_t)strtoul(in_string, &out_string, 0));
     }
   }
 

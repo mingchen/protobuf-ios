@@ -164,7 +164,7 @@ static PBArrayValueTypeInfo PBValueTypes[] =
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@ %p>{valueType = %d, count = %d, capacity = %d, data = %p}",
+	return [NSString stringWithFormat:@"<%@ %p>{valueType = %d, count = %lu, capacity = %lu, data = %p}",
 			[self class], self, _valueType, _count, _capacity, _data];
 }
 
