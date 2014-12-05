@@ -76,7 +76,7 @@
 /* Begin PBXFileReference section */
 		D7BA74EE15E220F6001835BB /* libprotobuf-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libprotobuf-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BA74F115E220F7001835BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "protobuf-iosTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "protobuf-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BA750115E220F7001835BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D7BA750915E220F7001835BB /* protobuf-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "protobuf-iosTests-Info.plist"; sourceTree = "<group>"; };
 		D7BA750B15E220F7001835BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D7BA74EE15E220F6001835BB /* libprotobuf-ios.a */,
-				D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */,
+				D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 			);
 			name = "protobuf-iosTests";
 			productName = "protobuf-iosTests";
-			productReference = D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */;
+			productReference = D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

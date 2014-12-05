@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D7BA74FD15E220F7001835BB"
-               BuildableName = "protobuf-iosTests.octest"
+               BuildableName = "protobuf-iosTests.xctest"
                BlueprintName = "protobuf-iosTests"
                ReferencedContainer = "container:protobuf-ios.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D7BA74FD15E220F7001835BB"
-               BuildableName = "protobuf-iosTests.octest"
+               BuildableName = "protobuf-iosTests.xctest"
                BlueprintName = "protobuf-iosTests"
                ReferencedContainer = "container:protobuf-ios.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D7BA74FD15E220F7001835BB"
-            BuildableName = "protobuf-iosTests.octest"
+            BuildableName = "protobuf-iosTests.xctest"
             BlueprintName = "protobuf-iosTests"
             ReferencedContainer = "container:protobuf-ios.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D7BA74FD15E220F7001835BB"
-            BuildableName = "protobuf-iosTests.octest"
+            BuildableName = "protobuf-iosTests.xctest"
             BlueprintName = "protobuf-iosTests"
             ReferencedContainer = "container:protobuf-ios.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D7BA74FD15E220F7001835BB"
-            BuildableName = "protobuf-iosTests.octest"
+            BuildableName = "protobuf-iosTests.xctest"
             BlueprintName = "protobuf-iosTests"
             ReferencedContainer = "container:protobuf-ios.xcodeproj">
          </BuildableReference>
