@@ -4,9 +4,10 @@
 
 [![travis-ci build status](https://travis-ci.org/mingchen/protobuf-ios.svg?branch=master)](https://travis-ci.org/mingchen/protobuf-ios)
 
-Google proto buffer for **iOS** written in **Objective-C**
+An **Objective-C** implementation of Google **proto buffer** for **iOS**. 
+The orignal code comes from [Booyah Inc](https://github.com/booyah/protobuf-objc). This implemenation add features to support write to / parse from delimited stream. This git repo also support [cocoapods](http://cocoapods.org).
 
-### Supported Platform
+## Supported Platform
 
 * iOS 4.0 and above
 * XCode 4 and above
@@ -15,6 +16,26 @@ Google proto buffer for **iOS** written in **Objective-C**
 ## Features
 
 - Support write to / parse from delimited stream (protobuf 2.3 feature).
+
+## Xcode integration
+
+### Integrate with CocoaPods
+
+If your project support [cocoapods](http://cocoapods.org), add a line to your **Podfile**:
+
+    pod 'protobuf-ios'
+
+Then update your dependences:
+
+    pod update
+
+
+### Integrate with source code
+
+Drag `protoc-ios.xcodeproj` to your Xcode project.
+
+That's all.
+
 
 ## How to use
 
@@ -45,26 +66,9 @@ If you system already install autoconf but linked, you can link it, here is an e
 
 ### Usage
 
+To compile the **proto** definition to **Objective-C**, use following command:
+
     ./src/protoc --objc_out=. foo.proto
-
-### Xcode integration
-
-#### Integrate with CocoaPods
-
-If your project support [cocoapods](http://cocoapods.org), add a line to your **Podfile**:
-
-    pod 'protobuf-ios'
-
-Then update your dependences:
-
-    pod update
-
-
-#### Integrate with source code
-
-Drag `protoc-ios.xcodeproj` to your Xcode project.
-
-That's all.
 
 
 ## Contribution
