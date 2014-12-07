@@ -17,6 +17,31 @@ The orignal code comes from [Booyah Inc](https://github.com/booyah/protobuf-objc
 
 - Support write to / parse from delimited stream (protobuf 2.3 feature).
 
+## Example
+
+You write a `foo.proto` file like this:
+
+    message Person {
+        required int32 id = 1;
+        required string name = 2;
+        optional string email = 3;
+    }
+    
+Then you compile it with `protoc` to produce code in Objective-C (see below).
+
+Serialize to protobuf format:
+
+    Person* person = [[[[[Person builder] setId:123]
+                                        setName:@"Bob"]
+                                       setEmail:@"bob@example.com"] build];
+    NSData* data = [person data];
+    
+Unserialize from protobuf format data:
+
+    NSData* raw_data = ...;
+    Person* person = [Person parseFromData:raw_data];
+
+
 ## Xcode integration
 
 ### Integrate with CocoaPods
