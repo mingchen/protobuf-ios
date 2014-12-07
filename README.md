@@ -17,7 +17,9 @@ The orignal code comes from [Booyah Inc](https://github.com/booyah/protobuf-objc
 
 - Support write to / parse from delimited stream (protobuf 2.3 feature).
 
-## Example
+## Examples
+
+### Simple Usage
 
 You write a `foo.proto` file like this:
 
@@ -41,7 +43,35 @@ Unserialize from protobuf format data:
     NSData* raw_data = ...;
     Person* person = [Person parseFromData:raw_data];
 
+### Delimited encode
 
+Sometime is very useful to write multiple protobuf objects into a single file.
+This need use delimited format. Here is an example:
+    
+    // serialize
+    NSOutputStream *ouputStream = [NSOutputStream outputStreamToFileAtPath:@"filename.dat" append:YES];
+    [ouputStream open];
+    for (int i=0; i<count; i++) {
+        // create a new Person object and assign value.
+        Person* person = ...;
+        
+        // write to stream use delimited format
+        [person writeDelimitedToOutputStream:outputStream];
+    }
+    
+    // unserialize
+    NSInputStream* inputStream = ...;
+    while(true) {
+        // read object one by one from stream.
+        Person* person = [Person parseDelimitedFromInputStream:inputStream];
+        if (!person) {
+            break;
+        }
+        
+        ....
+        ....
+    }
+    
 ## Xcode integration
 
 ### Integrate with CocoaPods
