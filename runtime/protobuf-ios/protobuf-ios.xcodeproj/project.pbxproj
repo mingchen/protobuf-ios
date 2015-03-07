@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D7BA74F215E220F7001835BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA74F115E220F7001835BB /* Foundation.framework */; };
-		D7BA750015E220F7001835BB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA74FF15E220F7001835BB /* SenTestingKit.framework */; };
 		D7BA750215E220F7001835BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA750115E220F7001835BB /* UIKit.framework */; };
 		D7BA750315E220F7001835BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA74F115E220F7001835BB /* Foundation.framework */; };
 		D7BA750615E220F7001835BB /* libprotobuf-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA74EE15E220F6001835BB /* libprotobuf-ios.a */; };
@@ -77,8 +76,7 @@
 /* Begin PBXFileReference section */
 		D7BA74EE15E220F6001835BB /* libprotobuf-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libprotobuf-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BA74F115E220F7001835BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "protobuf-iosTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7BA74FF15E220F7001835BB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "protobuf-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BA750115E220F7001835BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D7BA750915E220F7001835BB /* protobuf-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "protobuf-iosTests-Info.plist"; sourceTree = "<group>"; };
 		D7BA750B15E220F7001835BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7BA750015E220F7001835BB /* SenTestingKit.framework in Frameworks */,
 				D7BA750215E220F7001835BB /* UIKit.framework in Frameworks */,
 				D7BA750315E220F7001835BB /* Foundation.framework in Frameworks */,
 				D7BA750615E220F7001835BB /* libprotobuf-ios.a in Frameworks */,
@@ -170,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D7BA74EE15E220F6001835BB /* libprotobuf-ios.a */,
-				D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */,
+				D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				D7BA74F115E220F7001835BB /* Foundation.framework */,
-				D7BA74FF15E220F7001835BB /* SenTestingKit.framework */,
 				D7BA750115E220F7001835BB /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -341,8 +337,8 @@
 			);
 			name = "protobuf-iosTests";
 			productName = "protobuf-iosTests";
-			productReference = D7BA74FE15E220F7001835BB /* protobuf-iosTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = D7BA74FE15E220F7001835BB /* protobuf-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -350,7 +346,8 @@
 		D7BA74E515E220F6001835BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = D7BA74E815E220F6001835BB /* Build configuration list for PBXProject "protobuf-ios" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -459,8 +456,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -470,10 +474,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -482,12 +490,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
@@ -524,13 +542,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/protobuf-ios-Prefix.pch";
 				INFOPLIST_FILE = "protobuf-iosTests/protobuf-iosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -539,13 +556,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/protobuf-ios-Prefix.pch";
 				INFOPLIST_FILE = "protobuf-iosTests/protobuf-iosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -568,6 +584,7 @@
 				D7BA751415E220F7001835BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7BA751515E220F7001835BB /* Build configuration list for PBXNativeTarget "protobuf-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +593,7 @@
 				D7BA751715E220F7001835BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

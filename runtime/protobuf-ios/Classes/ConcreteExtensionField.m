@@ -392,7 +392,7 @@ int32_t typeSize(PBExtensionType type) {
     [output writeTag:fieldNumber format:PBWireFormatLengthDelimited];
     int32_t dataSize = 0;
     if (typeIsFixedSize(type)) {
-      dataSize = values.count * typeSize(type);
+      dataSize = (int32_t)values.count * typeSize(type);
     } else {
       for (id value in values) {
         dataSize += [self computeSingleSerializedSizeNoTag:value];
@@ -423,7 +423,7 @@ int32_t typeSize(PBExtensionType type) {
   if (isPacked) {
     int32_t size = 0;
     if (typeIsFixedSize(type)) {
-      size = values.count * typeSize(type);
+      size = (int32_t)values.count * typeSize(type);
     } else {
       for (id value in values) {
         size += [self computeSingleSerializedSizeNoTag:value];

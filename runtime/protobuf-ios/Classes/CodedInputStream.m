@@ -56,7 +56,7 @@ const int32_t BUFFER_SIZE = 4096;
 - (id) initWithData:(NSData*) data {
   if ((self = [super init])) {
     self.buffer = [NSMutableData dataWithData:data];
-    bufferSize = buffer.length;
+    bufferSize = (int32_t)buffer.length;
     self.input = nil;
     [self commonInit];
   }
@@ -575,7 +575,7 @@ const int32_t BUFFER_SIZE = 4096;
   bufferPos = 0;
   bufferSize = 0;
   if (input != nil) {
-    bufferSize = [input read:buffer.mutableBytes maxLength:buffer.length];
+    bufferSize = (int32_t)[input read:buffer.mutableBytes maxLength:buffer.length];
   }
 
   if (bufferSize <= 0) {
@@ -690,7 +690,7 @@ const int32_t BUFFER_SIZE = 4096;
       while (pos < chunk.length) {
         int32_t n = 0;
         if (input != nil) {
-          n = [input read:(((uint8_t*) chunk.mutableBytes) + pos) maxLength:chunk.length - pos];
+          n = (int32_t)[input read:(((uint8_t*) chunk.mutableBytes) + pos) maxLength:chunk.length - pos];
         }
         if (n <= 0) {
           @throw [NSException exceptionWithName:@"InvalidProtocolBuffer" reason:@"truncatedMessage" userInfo:nil];
