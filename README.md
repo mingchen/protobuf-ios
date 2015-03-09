@@ -91,6 +91,14 @@ Drag `protoc-ios.xcodeproj` to your Xcode project.
 
 That's all.
 
+### Compiler setting
+
+Since the generated code is non-ARC, if your project use ARC by default,
+you need add `-fno-objc-arc` to generated files.
+
+In Xcode, select the main project/targets/build phases/compile sources,
+select the m files/double click under compiler flag/add `-fno-objc-arc` to the popped window.
+
 
 ## How to use
 
