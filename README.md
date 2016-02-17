@@ -10,7 +10,7 @@ The orignal code comes from [Booyah Inc](https://github.com/booyah/protobuf-objc
 ## Supported Platform
 
 * iOS 4.0 and above
-* XCode 4 and above
+* Xcode 4 and above
 
 
 ## Features
